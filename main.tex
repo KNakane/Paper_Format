@@ -1,0 +1,57 @@
+\documentclass[a4paper,11pt,oneside]{jsbook}
+\setcounter{tocdepth}{2}
+\oddsidemargin 30pt
+\evensidemargin 30pt
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amsmath}
+\usepackage{ascmac}
+\usepackage{cite}
+\usepackage{bm}
+\footskip 20pt
+\makeatletter
+\def\ps@plainfoot{
+  \let\@mkboth\@gobbletwo
+  \let\@oddhead\@empty
+  \def\@oddfoot{\normalfont\hfil-- \thepage\ --\hfil}
+  \let\@evenhead\@empty
+  \let\@evenfoot\@oddfoot}
+\let\ps@plain\ps@plainfoot
+\makeatother
+\pagestyle{plain}
+
+\def\vector#1{\mbox{\boldmath $#1$}}
+
+\begin{document}
+\pagenumbering{roman}
+\begin{titlepage}
+\begin{center}
+
+\vspace*{100truept}
+{\huge タイトル}\\
+\vspace{30truept}
+{\huge 関する研究}\\ % タイトル
+\vspace{100truept}
+{\huge  教授} \\
+\vspace{40truept}
+{\huge yyyy年m月}\\ % 提出日
+\vspace{40truept}
+{\huge 所属}\\
+\vspace{40truept}
+{\huge 番号}\\ 
+\vspace{5truept}
+{\huge 名前}\\
+\vspace{5truept}
+{\huge Name}\\
+\vspace{100truept}
+
+
+\end{center}
+\end{titlepage}
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\include{chapter1/chapter1}
+\include{chapter2/chapter2}
+\include{shaji/shaji}
+\end{document}
